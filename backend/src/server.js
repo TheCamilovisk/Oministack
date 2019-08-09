@@ -5,9 +5,12 @@ const routes = require('./routes');
 
 const server = express();
 
-mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-9wikk.mongodb.net/omnistack?retryWrites=true&w=majority', {
+mongoose.connect(
+  'mongodb+srv://omnistack:omnistack@cluster0-9wikk.mongodb.net/omnistack?retryWrites=true&w=majority',
+  {
     useNewUrlParser: true
-});
+  }
+);
 
 server.use(cors());
 server.use(express.json());
